@@ -19,7 +19,7 @@ s-final: this?.new?.status == "Final"
 s-lastcall: this?.new?.status == "Lastcall"
 s-review: this?.new?.status == "Review"
 s-stagnant: this?.new?.status == "Stagnant"
-s-withdrawn: this?.new?.status == "Withdrawn"
+s-withdrawn: this?.new?.status == "alpha"
 
 #### PR Classification ####
 
