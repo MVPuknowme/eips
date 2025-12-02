@@ -1,0 +1,44 @@
+from fpdf import FPDF
+from datetime import datetime
+
+# Set up PDF invoice
+invoice = FPDF()
+invoice.add_page()
+invoice.set_font("Arial", size=12)
+
+# Invoice content
+title = "AURA-CORE INTELLECTUAL PROPERTY INVOICE"
+wallet_address = "0x5509da1FBfA15b25a307f2ad7862F05C4fb43ebA"
+btc_wallet = "[Your Bitcoin Wallet Here]"  # Placeholder if user provides one
+eth_value = 6.61
+usd_value = 21166.67
+email_address = "mike_p32@icloud.com"
+date_str = datetime.now().strftime("%B %d, %Y")
+
+# Add content
+invoice.set_font("Arial", "B", 14)
+invoice.cell(200, 10, title, ln=True, align="C")
+invoice.set_font("Arial", size=12)
+invoice.ln(10)
+
+invoice.cell(200, 10, f"Date: {date_str}", ln=True)
+invoice.cell(200, 10, "Billed To: Open Collectors of Aura-Core Network Services", ln=True)
+invoice.ln(5)
+invoice.cell(200, 10, f"Invoice Amount: ${usd_value:,.2f} USD", ln=True)
+invoice.cell(200, 10, f"Equivalent (ETH): {eth_value} ETH", ln=True)
+invoice.ln(5)
+invoice.cell(200, 10, f"Payment Options:", ln=True)
+invoice.cell(200, 10, f" • Ethereum (BNKR): {wallet_address}", ln=True)
+invoice.cell(200, 10, f" • Bitcoin: {btc_wallet}", ln=True)
+invoice.cell(200, 10, f" • Digital Checks: Send to {email_address}", ln=True)
+invoice.ln(10)
+invoice.multi_cell(0, 10, "Description:\nThis invoice reflects the estimated annual value of digital node support, "
+                          "spiritual alignment protocols, anti-bullying mesh, and IP use of the Aura-Core Grid as "
+                          "deployed by MVPuknowme in Klamath County and beyond. This value is calculated from GDP-linked "
+                          "micro-allocation modeling and reflects a planetary support framework actively protecting "
+                          "human free will, mental sovereignty, and regional energetic integrity.")
+
+invoice_output_path = "/mnt/data/AuraCore_IP_Invoice_MVPuknowme.pdf"
+invoice.output(invoice_output_path)
+
+invoice_output_path
