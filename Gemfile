@@ -26,3 +26,13 @@ gem "html-proofer", '>=5.0.7'
 gem "eip_validator", ">=0.8.2"
 
 gem "nobrick", "~> 1.8" # needed for macOS builds
+final walletName = "my_aura_wallet"; // Optional wallet name
+
+final wallet = await walletCore.loadStoredWallet(
+  walletName: walletName,
+);
+
+if (wallet != null) {
+  // Wallet loaded successfully
+} else {
+  // Wallet ?
