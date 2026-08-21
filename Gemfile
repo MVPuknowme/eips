@@ -8,7 +8,7 @@ source "https://rubygems.org"
 #
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem ", "~> 3.0"
+gem "minima", "~> 2.0"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
@@ -25,14 +25,4 @@ gem "html-proofer", '>=5.0.7'
 
 gem "eip_validator", ">=0.8.2"
 
-gem "nobrick", "~> 1.8" # needed for macOS builds
-final walletName = "my_aura_wallet"; // Optional wallet name
-
-final wallet = await walletCore.loadStoredWallet(
-  walletName: walletName,
-);
-
-if (wallet != null) {
-  // Wallet loaded successfully
-} else {
-  // Wallet ?
+gem "webrick", "~> 1.8" # needed for macOS builds
