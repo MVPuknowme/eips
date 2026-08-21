@@ -8,7 +8,7 @@ invoice.set_font("Arial", size=12)
 
 # Invoice content
 title = "AURA-CORE INTELLECTUAL PROPERTY INVOICE"
-wallet_address = "0x5509da1FBfA15b25a307f2ad7862F05C4fb43ebA"
+wallet_address = "0xbAA5A03bC268546194550a427d3F1d5787c15403"
 btc_wallet = "[Your Bitcoin Wallet Here]"  # Placeholder if user provides one
 eth_value = 6.61
 usd_value = 21166.67
