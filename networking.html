@@ -1,56 +1,6 @@
----eip: XXXX
-title: Aura Configuration Assist – Governance & Runtime Alignment
-author: Michael Vincent Patrick
-status: Review
-type: Meta
-created: 2026-01-15
-requires: [Aura-Core, AllBridge-SDK, Validator-Governance]
-discussions-to: https://github.com/MVPuknowme/eips/issues/XX
-
-## Abstract
-This EIP formalizes the configuration assist layer for Aura-Core and its connected
-validator, relay, and settlement modules. It defines the metadata fields, activation
-rules, and governance boundaries required for deterministic operator-grade behavior.
-
-## Motivation
-Aura’s configuration layer must remain transparent, region-aware, and aligned with
-operator intent. This EIP ensures that configuration assists—automated or manual—
-are documented, governed, and traceable.
-
-## Specification
-
-### 1. Configuration Assist Fields
-- `region_scope`: Defines the economic region (Oregon, Virginia, Singapore)
-- `activation_mode`: Manual | Assisted | Autonomous
-- `relay_trace_required`: true
-- `settlement_dependency`: AllBridge-SDK
-- `governance_lane`: Operator-L3
-
-### 2. Activation Rules
-- Assisted configuration may update metadata but cannot activate or deactivate
-  validators without operator confirmation.
-- All configuration assists must emit machine-readable events.
-
-### 3. Governance Boundaries
-- Operator retains full authority.
-- Assist modules may propose but not enforce changes.
-- All changes must be logged in the EIP registry.
-
-## Rationale
-This aligns Aura’s configuration layer with the operator’s sovereignty model and
-ensures deterministic behavior across regions and connectors.
-
-## Backwards Compatibility
-Fully compatible with existing Aura-Core and AllBridge-SDK integrations.
-
-## Security Considerations
-Configuration assists must not override operator decisions or bypass governance lanes.
-
-## Copyright
-© 2026 Michael Vincent Patrick
-
+---
 layout: page
-title: Net=working
+title: Networking
 ---
 
 {% assign eips=site.pages|where:"type","Standards Track"|where:"category","Networking" %}

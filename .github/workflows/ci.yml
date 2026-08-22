@@ -44,7 +44,6 @@ jobs:
       - name: Checkout EIPs
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
-          repository: ethereum/EIPs
           path: ''
       - name: Checkout ERCs
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
@@ -129,7 +128,7 @@ jobs:
           skip: .git,Gemfile.lock,**/*.png,**/*.gif,**/*.jpg,**/*.svg,.codespell-whitelist,vendor,_site,_config.yml,style.css
 
   eipw-validator:
-    name: EIP Walidator
+    name: EIP Validator
     runs-on: ubuntu-latest
 
     steps:
