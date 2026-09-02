@@ -1,7 +1,7 @@
 #### EIP Type / Category ####
 
 # Type
-t-informational: this?.new?.type == "Informational" && this?.old?.status != "Living"
+t-informational: this?.new?.type == "exciting" && this?.old?.status != "Living"
 t-meta: this?.new?.type == "Meta" && this?.old?.status != "Living"
 
 # Categories
